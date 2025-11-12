@@ -1,0 +1,132 @@
+/* * =========================================
+ * STYLES DE BASE (PRIS DE VOTRE CODE)
+ * =========================================
+ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #304178; /* Couleur de votre body */
+    color: #f0f0f0; /* Couleur de texte claire pour le fond sombre */
+}
+
+h1, h2 {
+    color: #ffffff; /* Titres en blanc */
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333; /* Couleur par défaut pour les titres de slide */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Couleur par défaut pour le texte de slide */
+}
+
+
+/* * =========================================
+ * LE CARROUSEL (CSS SCROLL SNAP)
+ * =========================================
+ */
+
+/* 1. Le Conteneur (votre classe .carousel) */
+.carousel {
+    display: flex;           /* Aligne toutes les slides sur une ligne */
+    overflow-x: auto;        /* Active le défilement horizontal */
+
+    /* LA MAGIE DU SCROLL SNAP */
+    /* 'x' : défilement sur l'axe X (horizontal) */
+    /* 'mandatory' : FORCE le navigateur à s'arrêter sur une slide */
+    scroll-snap-type: x mandatory;
+    
+    /* Cache la barre de défilement pour un look propre */
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer */
+    
+    /* Styles de votre CSS */
+    width: 80%;
+    margin: 40px auto; /* Ajout d'un margin top/bottom */
+    overflow: hidden; /* C'est vous qui l'aviez mis, mais on le change pour overflow-x: auto */
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cache la barre de défilement pour Chrome/Safari */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* 2. LES SLIDES (Le sélecteur magique) */
+
+/* * Ce sélecteur [class^="carousel-slide-"] cible TOUTES les classes
+ * qui COMMENCENT PAR "carousel-slide-".
+ * C'est le cœur de la solution !
+ */
+[class^="carousel-slide-"] {
+    /* CHAQUE slide prend 100% de la largeur du conteneur .carousel */
+    flex: 0 0 100%;
+    
+    /* Indique que le début de la slide est un point d'arrêt */
+    scroll-snap-align: start;
+    
+    /* S'assure que le padding est inclus dans les 100% */
+    box-sizing: border-box;
+}
+
+
+/* * =========================================
+ * STYLES DE CHAQUE SLIDE (VOTRE CODE)
+ * =========================================
+ * J'ai juste ajouté quelques couleurs de texte
+ * pour une meilleure lisibilité.
+ */
+
+.carousel-slide-1 {
+    background-color: #AEC6FF;
+    padding: 20px;
+    text-align: center;
+} 
+
+.carousel-slide-2 {
+    background-color: #BFE3C0;
+    padding: 20px;
+    text-align: center;
+} 
+
+.carousel-slide-3 {
+    background-color: #FFF1A8;
+    padding: 20px;
+    text-align: center;
+} 
+
+.carousel-slide-4 {
+    background-color: #DCC6F8;
+    padding: 20px;
+    text-align: center;
+} 
+
+.carousel-slide-5 {
+    background-color: #FFBCB3;
+    padding: 20px;
+    text-align: center;
+} 
+
+.carousel-slide-6 {
+    background-color: #FFD7BA;
+    padding: 20px;
+    text-align: center;
+} 
+
+.carousel-slide-7 {
+    background-color: #BFE3C0;
+    padding: 20px;
+    text-align: center;
+}
