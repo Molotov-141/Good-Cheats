@@ -1,16 +1,15 @@
-/* * =========================================
- * STYLES DE BASE (PRIS DE VOTRE CODE)
- * =========================================
- */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #304178; /* Couleur de votre body */
-    color: #f0f0f0; /* Couleur de texte claire pour le fond sombre */
+    background-color: #304178; 
+    color: #f0f0f0; 
+    
+
+    scroll-behavior: smooth; 
 }
 
 h1, h2 {
-    color: #ffffff; /* Titres en blanc */
+    color: #ffffff;
     text-align: center;
 }
 
@@ -20,74 +19,81 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    color: #333; /* Couleur par défaut pour les titres de slide */
+    color: #333;
 }
 
 p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555; /* Couleur par défaut pour le texte de slide */
+    color: #555;
 }
 
 
-/* * =========================================
- * LE CARROUSEL (CSS SCROLL SNAP)
- * =========================================
- */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    background-color: #203060; 
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 90%;
+    margin: 20px auto;
+}
 
-/* 1. Le Conteneur (votre classe .carousel) */
+.carousel-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.carousel-nav a:hover {
+    background-color: #4a6fa5;
+    transform: translateY(-1px);
+}
+
+.carousel-nav a:focus,
+.carousel-nav a:active {
+    background-color: #007bff;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
 .carousel {
-    display: flex;           /* Aligne toutes les slides sur une ligne */
-    overflow-x: auto;        /* Active le défilement horizontal */
-
-    /* LA MAGIE DU SCROLL SNAP */
-    /* 'x' : défilement sur l'axe X (horizontal) */
-    /* 'mandatory' : FORCE le navigateur à s'arrêter sur une slide */
+    display: flex;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     
-    /* Cache la barre de défilement pour un look propre */
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer */
-    
-    /* Styles de votre CSS */
+
     width: 80%;
-    margin: 40px auto; /* Ajout d'un margin top/bottom */
-    overflow: hidden; /* C'est vous qui l'aviez mis, mais on le change pour overflow-x: auto */
+    margin: 40px auto; 
     border: 2px solid #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Cache la barre de défilement pour Chrome/Safari */
 .carousel::-webkit-scrollbar {
     display: none;
 }
 
 
-/* 2. LES SLIDES (Le sélecteur magique) */
-
-/* * Ce sélecteur [class^="carousel-slide-"] cible TOUTES les classes
- * qui COMMENCENT PAR "carousel-slide-".
- * C'est le cœur de la solution !
- */
 [class^="carousel-slide-"] {
-    /* CHAQUE slide prend 100% de la largeur du conteneur .carousel */
     flex: 0 0 100%;
-    
-    /* Indique que le début de la slide est un point d'arrêt */
     scroll-snap-align: start;
-    
-    /* S'assure que le padding est inclus dans les 100% */
+    scroll-margin-left: 0;
     box-sizing: border-box;
+    min-height: 350px; 
 }
 
 
-/* * =========================================
- * STYLES DE CHAQUE SLIDE (VOTRE CODE)
- * =========================================
- * J'ai juste ajouté quelques couleurs de texte
- * pour une meilleure lisibilité.
- */
 
 .carousel-slide-1 {
     background-color: #AEC6FF;
@@ -120,13 +126,13 @@ p {
 } 
 
 .carousel-slide-6 {
-    background-color: #FFD7BA;
+    background-color: #FFD7BA; 
     padding: 20px;
     text-align: center;
 } 
 
 .carousel-slide-7 {
-    background-color: #BFE3C0;
+    background-color: #BFE3C0; 
     padding: 20px;
     text-align: center;
 }
