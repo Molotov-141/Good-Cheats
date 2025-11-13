@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #304178;
+    color: #f0f0f0; 
+}
+
+.main-header-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #1a233b;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.main-header-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.main-header-nav a:hover {
+    color: #AEC6FF;
+}
