@@ -116,6 +116,26 @@ body {
 }
 
 
+/* ------------------------------------- */
+/* FIN MAIN HEADER NAV */
+/* ------------------------------------- */
+
+
+/*photo de profil ?*/
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #AEC6FF; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ------------------------------------- */
+/* FIN BODY */
+/* ------------------------------------- */
+
 
 .main-footer-nav {
     display: flex;

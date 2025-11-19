@@ -114,29 +114,3 @@ body {
         transform: rotate(-45deg) translate(6px, -6px);
     }
 }
-
-
-
-.main-footer-nav {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 10px; 
-}
-
-.main-footer-nav a {
-    color: #ffffff;
-    background-color: #203060;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin-left: 0; 
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-.main-footer-nav a:hover {
-    background-color: #4a6fa5;
-    color: #ffffff;
-    text-decoration: none; 
-    transform: translateY(-1px); 
-}
