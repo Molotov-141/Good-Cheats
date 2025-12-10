@@ -208,13 +208,15 @@ input[type="radio"] {
 [class^="carousel-slide-"] {
     width: calc(100% / 7); 
     flex-shrink: 0;
-    
     box-sizing: border-box;
     min-height: 350px; 
 }
 
 [class^="carousel-slide-"] img {
+    width: 100%;  
     max-width: 900px;
+    height: auto; 
+
     display: block;
     margin: 10px auto 20px auto;
     border-radius: 8px;
