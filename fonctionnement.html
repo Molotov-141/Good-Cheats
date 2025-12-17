@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodcheats</title>
-    <link rel="stylesheet" href="css/general.css">
+    <meta name="description" content="Explication technique du fonctionnement des logiciels de triche : injection et cheats externes." />
+    <!-- Les styles généraux du site sont inclus -->
+    <link rel="stylesheet" href="css/styleindex.css" />
+    <link rel="stylesheet" href="css/general.css" /> 
     <link rel="icon" type="image/png" href="mon_icone.png">
+    <title>Fonctionnement - Goodcheats</title>
 </head>
 <body>
+    
+    <!-- Navigation (Identique à index.html) -->
     <nav class="main-header-nav">
         <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
         <label for="hamburger-toggle" class="hamburger-icon">
@@ -23,13 +28,59 @@
             <a href="presentation.html">L'auteur</a>
         </div>
     </nav>
+
+    <!-- Contenu Principal -->
+    <main class="content-box">
+        <h1>Comprendre le Fonctionnement Technique des Cheats</h1>
+
+        <p>La triche dans les jeux vidéo repose principalement sur deux grandes catégories de logiciels, se distinguant par leur méthode d'interaction avec le jeu : l'injection (cheats internes) et l'exécution en parallèle (cheats externes).</p>
+        
+        <h2>Les Cheats à Injecter (Internes)</h2>
+        
+        <p>Les cheats internes, aussi appelés cheats injectables, sont les plus puissants et les plus difficiles à détecter. Ils fonctionnent en insérant leur code directement dans le processus mémoire du jeu en cours d'exécution.</p>
+
+        <h3>Mécanisme d'Injection</h3>
+        <p>L'injection utilise généralement une Dynamic Link Library (DLL). L'injecteur, un programme séparé, force le jeu à charger et exécuter cette DLL. Une fois dans la mémoire du jeu, le cheat a un accès total à toutes les données, fonctions et variables du jeu (position des joueurs, murs, munitions, etc.).</p>
+
+        <ul>
+            <li><strong>Avantages :</strong> Accès illimité à l'état interne du jeu, permettant des fonctionnalités complexes comme les Wallhacks (voir à travers les murs) et les Aimbots sophistiqués.</li>
+            <li><strong>Défis de Détection :</strong> Les systèmes anti-triche doivent analyser la mémoire du processus de jeu pour trouver le code non légitime (la DLL injectée). C'est pourquoi de nombreux anti-cheats fonctionnent au niveau du noyau (Kernel-level) pour avoir une vue complète.</li>
+        </ul>
+        
+        <h3>Exemples de Cheats Internes</h3>
+        <p>La plupart des Aimbots de haute précision et des ESP (Extra Sensory Perception, comme les Wallhacks) utilisent l'injection pour lire et manipuler les données essentielles du jeu.</p>
+
+        <hr>
+
+        <h2>Les Cheats Externes</h2>
+
+        <p>Les cheats externes sont des programmes qui s'exécutent en dehors du processus du jeu. Ils n'interagissent pas directement avec la mémoire interne, ce qui les rend généralement moins performants mais plus sûrs contre les méthodes de détection basées sur la lecture de la mémoire.</p>
+
+        <h3>Mécanisme d'Exécution Externe</h3>
+        <p>Ces cheats communiquent avec le jeu de manière indirecte :</p>
+        <ol>
+            <li><strong>Lecture d'écran :</strong> L'outil lit les pixels affichés à l'écran, comme un joueur humain. Par exemple, un Aimbot externe peut rechercher une couleur spécifique (la tête d'un ennemi) et calculer les mouvements de la souris pour viser.</li>
+            <li><strong>Manipulation d'entrée :</strong> Ils simulent les actions de l'utilisateur (clics, mouvements de souris/clavier) à une vitesse et une précision surhumaines (ex: Auto-Clickers, macros de Recoil Control).</li>
+        </ol>
+
+        <h3>Avantages et Défis</h3>
+        <p>Bien qu'ils soient moins efficaces pour obtenir des informations secrètes (comme la position d'ennemis non visibles), ils sont souvent plus difficiles à distinguer d'un comportement normal par certains anti-cheats. La détection se fait alors par analyse comportementale ou par la vitesse d'exécution anormale des commandes.</p>
+
+        <ul>
+            <li><strong>Exemples :</strong> Auto-Clickers simples, scripts de macro pour la gestion du recul (Recoil Control), ou bots de farming qui ne nécessitent pas d'accéder aux données internes du jeu.</li>
+        </ul>
+
+    </main>
+
+    <!-- Pied de page (Identique à index.html) -->
     <footer>
         <p>© 2025 Goodcheats. Tous droits réservés.</p>
         <nav class="main-footer-nav">
-        <a href="contact.html">Nous contacter</a>
-        <a href="pdc.html">Politique de confidentialité</a>
-        <a href="legal.html">Mentions légales</a>
-    </nav>
+            <a href="contact.html">Nous contacter</a>
+            <a href="pdc.html">Politique de confidentialité</a>
+            <a href="legal.html">Mentions légales</a>
+        </nav>
     </footer>
+
 </body>
 </html>

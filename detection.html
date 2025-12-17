@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styledetection.css" />
+    <meta name="description" content="Analyse des différentes méthodes anti-triche : des systèmes basés sur le noyau (kernel) à l'analyse comportementale." />
+    <!-- Les styles généraux du site sont inclus -->
+    <link rel="stylesheet" href="css/styleindex.css" />
+    <link rel="stylesheet" href="css/general.css" /> 
     <link rel="icon" type="image/png" href="mon_icone.png">
+    <title>Détection - Goodcheats</title>
 </head>
 <body>
+    
+    <!-- Navigation (Identique à index.html) -->
     <nav class="main-header-nav">
         <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
         <label for="hamburger-toggle" class="hamburger-icon">
@@ -23,13 +28,63 @@
             <a href="presentation.html">L'auteur</a>
         </div>
     </nav>
+
+    <!-- Contenu Principal -->
+    <main class="content-box">
+        <h1>Les Méthodes de Détection Anti-Triche</h1>
+
+        <p>Les développeurs de jeux investissent massivement dans des systèmes anti-triche pour préserver l'équité compétitive. La détection est un jeu constant du chat et de la souris, obligeant les outils anti-triche à devenir de plus en plus sophistiqués.</p>
+        
+        <h2>1. Analyse Basée sur la Mémoire (Cheats Internes)</h2>
+        
+        <p>C'est la méthode de défense classique contre les cheats à injection (DLL) qui modifient le processus du jeu en mémoire.</p>
+
+        <h3>Systèmes au Niveau Utilisateur (User-Level)</h3>
+        <p>Ces systèmes s'exécutent comme des applications normales et ont des permissions limitées. Ils peuvent scanner l'espace mémoire du jeu pour identifier des signatures de code non-autorisé ou des schémas de modification des variables (comme la santé ou les munitions).</p>
+        <ul>
+            <li><strong>Exemple :</strong> Valve Anti-Cheat (VAC) utilise historiquement cette approche, en cherchant des "signatures" connues de cheats.</li>
+        </ul>
+        
+        <h3>Systèmes au Niveau du Noyau (Kernel-Level)</h3>
+        <p>Ces systèmes possèdent les plus hautes permissions sur le système d'exploitation, leur permettant de surveiller tous les processus, même ceux qui tentent de se cacher ou de manipuler les fonctions de bas niveau. Ils sont extrêmement efficaces mais soulèvent parfois des questions de confidentialité.</p>
+        <ul>
+            <li><strong>Avantage :</strong> Capacité à détecter les cheats très sophistiqués qui fonctionnent en dehors de l'espace mémoire visible du jeu.</li>
+            <li><strong>Exemples :</strong> Riot Vanguard, Easy Anti-Cheat.</li>
+        </ul>
+
+        <hr>
+
+        <h2>2. Analyse Comportementale et Heuristique (Cheats Externes)</h2>
+
+        <p>Cette approche se concentre sur les actions du joueur plutôt que sur son code. Elle est essentielle pour attraper les cheats externes qui n'injectent rien dans la mémoire du jeu.</p>
+
+        <h3>Analyse du Serveur</h3>
+        <p>Le serveur du jeu peut effectuer des vérifications de cohérence. Si un joueur se déplace trop rapidement, tire trop précisément, ou inflige des dégâts impossibles, le serveur peut immédiatement signaler ou révoquer l'action. Le serveur est l'autorité finale.</p>
+        
+        <h3>Machine Learning et Intelligence Artificielle</h3>
+        <p>De plus en plus, les entreprises utilisent l'IA pour analyser les modèles de jeu sur de longues périodes. Un Aimbot a un comportement de visée et de réaction statistiquement différent d'un joueur humain, même très talentueux. L'IA peut identifier ces schémas anormaux.</p>
+
+        <ul>
+            <li><strong>Détection des Recoil Macros :</strong> Les scripts qui éliminent le recul de l'arme laissent un motif de mouvement de souris parfaitement régulier, facilement identifié par des algorithmes.</li>
+            <li><strong>Détection des Wallhacks :</strong> L'IA peut repérer des modèles où un joueur pré-vise systématiquement des ennemis à travers les murs.</li>
+        </ul>
+
+        <hr>
+
+        <h2>La Vague des Bannissements</h2>
+        <p>Pour dissuader la création de nouveaux cheats, de nombreux systèmes utilisent des "bannissements différés" (Ban Waves). Le cheat est détecté, mais le compte n'est pas banni immédiatement. Cela permet aux développeurs de collecter plus de données sur les tricheurs et de s'assurer que les créateurs de cheats ne comprennent pas immédiatement ce qui a permis la détection, prolongeant ainsi l'efficacité de la méthode anti-triche.</p>
+
+    </main>
+
+    <!-- Pied de page (Identique à index.html) -->
     <footer>
         <p>© 2025 Goodcheats. Tous droits réservés.</p>
         <nav class="main-footer-nav">
-        <a href="contact.html">Nous contacter</a>
-        <a href="pdc.html">Politique de confidentialité</a>
-        <a href="legal.html">Mentions légales</a>
-    </nav>
+            <a href="contact.html">Nous contacter</a>
+            <a href="pdc.html">Politique de confidentialité</a>
+            <a href="legal.html">Mentions légales</a>
+        </nav>
     </footer>
+
 </body>
 </html>

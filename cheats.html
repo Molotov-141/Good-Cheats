@@ -6,8 +6,92 @@
     <title>Goodcheats</title>
     <link rel="icon" type="image/png" href="mon_icone.png">
     <link rel="stylesheet" href="css/stylecheats.css">
-</head>
-<body>
+    
+    <style>
+        html, body {
+            height: 100%; 
+            width: 100%;
+            margin: 0;
+        }
+
+        .gallery-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; 
+            
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none; 
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay:target {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto; 
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%; 
+            max-height: 90%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-image {
+            display: block;
+            width: auto;
+            max-height: 90vh; 
+            max-width: 90vw;  
+            object-fit: contain; 
+            border-radius: 8px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); 
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000; 
+            transition: color 0.2s;
+            text-decoration: none;
+            line-height: 1; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 5px 15px;
+            border-radius: 50px;
+        }
+
+        .close-button:hover {
+            color: #ff5555;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
 
     <nav class="main-header-nav">
         <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
@@ -28,7 +112,6 @@
     <h1>Les différents logiciels de triche</h1>
     <h2>Un logiciel de triche, aussi appelé "cheat" (de l'anglais "tricher") est un logiciel interne ou externe qui sert à un joueur à se donner un avantage dans un jeu vidéo.</h2>
 
-    <!-- Boutons radio cachés-->
     <input type="radio" name="slider" id="radio-1" checked>
     <input type="radio" name="slider" id="radio-2">
     <input type="radio" name="slider" id="radio-3">
@@ -37,7 +120,6 @@
     <input type="radio" name="slider" id="radio-6">
     <input type="radio" name="slider" id="radio-7">
 
-    <!-- barre de navigation, le label agit comme un bouton -->
     <nav class="carousel-nav">
         <label for="radio-1" class="nav-label">ESP</label>
         <label for="radio-2" class="nav-label">AIMBOT</label>
@@ -54,49 +136,85 @@
             
             <div class="carousel-slide-1">
                 <h2>Extra Sensorial Perception</h2>
-                <img src="images/esp.jpg" alt="Image d'ESP">
+                <a href="#modal-esp">
+                    <img class="gallery-image" src="images/esp.jpg" alt="Image d'ESP">
+                </a>
                 <p>L'ESP ou Extra Sensorial Perception est un cheat utilisé pour connaitre la position des ennemis (dans les jeux de tir à la première personne la plupart du temps) en modifiant leur texture (pour empêcher un camouflage) ou en affichant une boite autour de l'ennemi visible à travers les murs. Ce cheat récupère depuis le serveur la position des ennemis et l'affiche côté client sur l'écran du tricheur. Il est aussi souvent appelé wallhack. C'est un logiciel très utile dans des jeux où l'information sur la position des adversaires est très utilse (comme CS:GO) et si il est bien utilisé, est compliqué à repérer.</p>
             </div>
             
             <div class="carousel-slide-2">
                 <h2>AIMBOT</h2>
-                <img src="images/aimbot.jpg" alt="Image d'AIMBOT">
+                <a href="#modal-aimbot">
+                    <img class="gallery-image" src="images/aimbot.jpg" alt="Image d'AIMBOT">
+                </a>
                 <p>L'AIMBOT, très souvent utilisé dans les jeux de tir à la première personne compétitifs, comme CS:GO ou Call of duty Warzone, est un logiciel de triche qui sert à placer son curseur automatiquement sur la tête de l'ennemi (en général pour le tuer en un coup, sans avoir à bouger sa souris). C'est un logiciel très puissant, et, s'il est bien utilisé, peut être difficile à détecter.</p>
             </div>
             
             <div class="carousel-slide-3">
                 <h2>RECOIL CONTROL</h2>
-                <img src="images/recoil.jpg" alt="Image de RECOIL CONTROL">
+                </a>
                 <p>Le RECOIL CONTROL est éalement très utilisé dans les jeux de tir à la première personne (surtout dans CS:GO, connu pour la difficulté du contrôle des armes) qui sert à bouger automatiquement son viseur pour que les balles partent toujours au même endroit. En général, dans les jeux vidéos, si on tire plus d'une balle dans un intervalle de temps réduit, les prochaines balles vont partir un peu "n'importe où". Sauf que dans la plupart des jeux, ces balles ne partent pas n'importe où ! Dans CS:GO par exemple, il y a des patterns à connaitre et à maitriser pour que les balles aillent toutes au même endroit. C'est comme ça que ce logiciel de triche peut réussir à contrer les recul des armes, en bougeant le curseur du joueur dans un mouvement opposé au pattern du recul de l'arme. C'est un cheat assez puissant et très difficile à détecter, surtout à haut niveau, où tout le monde commence à très bien maitriser le recul des armes.</p>
             </div>
             
             <div class="carousel-slide-4">
                 <h2>SPEED HACK</h2>
-                <img src="images/speedhack.jpg" alt="Image de SPEED HACK">
                 <p>Le SPEED HACK, comme son nom l'indique, est un cheat qui sert au tricheur à accélérer certaines actions, comme par exemple la pousse des cultures dans farming simulator, ou le temps de rechargement dans les jeux de tir, mais il peut aussi accélérer la vitesse de marche du personnage, ce qui peut être un avantage énorme.. Dans les jeux solo en général on ne blamera personne (si les gens veulent tricher, qu'ils trichent) mais dans les jeux en ligne, plus le logiciel donne des avantages au joueur, plus il est facilement détectable.</p>
             </div>
 
             <div class="carousel-slide-5">
                 <h2>FLY HACK</h2>
-                <img src="images/fly.jpg" alt="Image de FLY">
+                <a href="#modal-fly">
+                    <img class="gallery-image" src="images/fly.jpg" alt="Image de FLY HACK">
+                </a>
                 <p>Le FLY HACK, comme son nom l'indique, a été popularisé grâce au jeu Minecraft. On a souvent vu des joueurs voler dans les airs pour aller plus vite d'un point A à un point B ou tout simplement pour construire plus facilement. C'est un cheat très facilement détectable, mais il peut aussi être très utile.</p>
             </div>
 
             <div class="carousel-slide-6">
                 <h2>AUTOCLICKER</h2>
-                <img src="images/autoclicker.jpg" alt="Image d'AUTOCLICKER" dysplay: none>
-                <p>L'AUTOCLICKER est un cheat qui sert à automatiser une tâche redondante, comme par exemple devoir cliquer un certain nombre de fois sur un objet pour gagner telle ou telle récompense. C'est de l'automatisation pure, et très peu utilisée en jeux multijoueurs. Ce cheat n'est pas forcément facile à détecter. Quand il est utilisé dans les jeux multijoueurs, il sert la plupart du temps à accélérer la vitesse de ses clics pour taper plus vite.</p>
+                <a href="#modal-autoclicker">
+                    <img class="gallery-image" src="images/autoclicker.jpg" alt="Image d'AUTOCLICKER">
+                </a>
+                <p>L'AUTOCLICKER est un cheat qui sert à automatiser une click redondant, comme par exemple cliquer un certain nombre de fois sur un objet pour gagner telle ou telle récompense. C'est de l'automatisation pure, et très peu utilisée en jeux multijoueurs. Ce cheat n'est pas forcément facile à détecter. Quand il est utilisé dans les jeux multijoueurs, il sert la plupart du temps à accélérer la vitesse de ses clics pour taper plus vite.</p>
             </div>
 
             <div class="carousel-slide-7">
                 <h2>FARMBOT</h2>
-                <img src="images/farmbot.jpg" alt="Image de FARMBOT">
-                <p>Le FARMBOT est un logiciel très avancé conçu principalement pour farming siimulator ou des jeux semblables, et sert à automatiser un grand nombre d'actions (comme la plante ou la récolte de cultures). Il n'est pas facilement détectable.</p>
+                <p>Le FARMBOT est un logiciel très avancé conçu principalement pour farming simulator ou des jeux semblables, et sert à automatiser un grand nombre d'actions (comme la plante ou la récolte de cultures). Il n'est pas facilement détectable.</p>
             </div>
             
         </div>
 
     </div>
+    
+    <div id="modal-esp" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#_" class="close-button" title="Fermer">&times;</a>
+            <img class="modal-image" src="images/esp.jpg" alt="Image d'ESP agrandie">
+        </div>
+    </div>
+
+    <div id="modal-aimbot" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#_" class="close-button" title="Fermer">&times;</a>
+            <img class="modal-image" src="images/aimbot.jpg" alt="Image d'AIMBOT agrandie">
+        </div>
+    </div>
+    
+    <div id="modal-fly" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#_" class="close-button" title="Fermer">&times;</a>
+            <img class="modal-image" src="images/fly.jpg" alt="Image de FLY HACK agrandie">
+        </div>
+    </div>
+
+    <div id="modal-autoclicker" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#_" class="close-button" title="Fermer">&times;</a>
+            <img class="modal-image" src="images/autoclicker.jpg" alt="Image d'AUTOCLICKER agrandie">
+        </div>
+    </div>
+
+
     <footer>
         <p>© 2025 Goodcheats. Tous droits réservés.</p>
         <nav class="main-footer-nav">
