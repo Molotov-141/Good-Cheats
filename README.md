@@ -15,4 +15,6 @@ Le projet se compose d'un fichier principal, sept pages html et de 6 pages de st
 ## 📐 Mise en Page Responsive
 - Barre de Navigation
 Desktop : Les liens de navigation sont affichés horizontalement et centrés.
-Mobile (<= 768px) : Les liens sont masqués par défaut et accessibles via une icône Hamburger qui, une fois cliquée, ouvre un menu déroulant vertical.
+Mobile (<= 768px) : Les liens sont masqués par défaut et accessibles via une icône qui, une fois cliquée, ouvre un menu déroulant vertical.
+
+Voici le lien pour accéder au projet : molotov-141.github.io/Good-Cheats
