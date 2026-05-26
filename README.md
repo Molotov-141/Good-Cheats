@@ -17,4 +17,4 @@ Le projet se compose d'un fichier principal, sept pages html et de 6 pages de st
 Desktop : Les liens de navigation sont affichés horizontalement et centrés.
 Mobile (<= 768px) : Les liens sont masqués par défaut et accessibles via une icône qui, une fois cliquée, ouvre un menu déroulant vertical.
 
-Voici le lien pour accéder au projet : <a href=molotov-141.github.io/Good-Cheats>ICI</a>
+Voici le lien pour accéder au projet : <a href=https://molotov-141.github.io/Good-Cheats>ICI</a>
